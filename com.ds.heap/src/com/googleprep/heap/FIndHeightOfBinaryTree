@@ -1,0 +1,16 @@
+	/*
+    class Node 
+    	int data;
+    	Node left;
+    	Node right;
+	*/
+	public static int height(Node root) {
+      	int lHeight = 0;
+        int rHeight = 0;
+        if(root == null) {
+            return -1;
+        }
+        lHeight = height(root.left);
+        rHeight = height(root.right);
+        return Math.max(lHeight, rHeight)+1;
+    }
